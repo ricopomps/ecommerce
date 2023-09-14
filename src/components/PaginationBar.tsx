@@ -3,10 +3,12 @@ import Link from "next/link";
 interface PaginationBarProps {
   currentPage: number;
   totalPages: number;
+  destination?: string;
 }
 export default function PaginationBar({
   currentPage,
   totalPages,
+  destination = "?page=",
 }: PaginationBarProps) {
   const maxPage = Math.min(totalPages, Math.max(currentPage + 4, 10));
   const minPage = Math.max(1, Math.min(currentPage - 5, maxPage - 9));
@@ -16,7 +18,7 @@ export default function PaginationBar({
   for (let page = minPage; page <= maxPage; page++) {
     numberedPageItems.push(
       <Link
-        href={`?page=${page}`}
+        href={`${destination}${page}`}
         className={`btn join-item ${
           currentPage === page ? "btn-active pointer-events-none" : ""
         }`}
@@ -30,7 +32,10 @@ export default function PaginationBar({
       <div className="join hidden sm:block">{numberedPageItems}</div>
       <div className="join block sm:hidden">
         {currentPage > 1 && (
-          <Link href={`?page=${currentPage - 1}`} className="btn join-item">
+          <Link
+            href={`${destination}${currentPage - 1}`}
+            className="btn join-item"
+          >
             «
           </Link>
         )}
@@ -38,7 +43,10 @@ export default function PaginationBar({
           Page {currentPage}
         </button>
         {currentPage > 1 && (
-          <Link href={`?page=${currentPage + 1}`} className="btn join-item">
+          <Link
+            href={`${destination}${currentPage + 1}`}
+            className="btn join-item"
+          >
             »
           </Link>
         )}
