@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This app is a ecommerce, the base ecommerce was made using the following [video](https://www.youtube.com/watch?v=AaiijESQH5o) from Coding in Flow
 
-Tags => #NextJs #React #typescript #TailwindCSS #Prisma #DaisyUI #App Router #Zod
+Tags => #NextJs #React #typescript #TailwindCSS #Prisma #Prisma Extensions #DaisyUI #App Router #Zod
 
 ## Getting Started
 
