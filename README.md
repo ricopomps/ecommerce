@@ -4,6 +4,8 @@ This app is a ecommerce, the base ecommerce was made using the following [video]
 
 Tags => #NextJs #React #typescript #TailwindCSS #Prisma #Prisma Extensions #DaisyUI #App Router #Zod
 
+[Project deployed here](https://ecommerce-5hfs83245-ricopomps.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
